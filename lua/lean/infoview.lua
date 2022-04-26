@@ -286,8 +286,8 @@ function Infoview:focus_on_current_buffer()
   if self.window then
     set_augroup("LeanInfoviewUpdate", [[
       autocmd CursorMoved <buffer> lua require'lean.infoview'.__update()
-      autocmd CursorMovedI <buffer> lua require'lean.infoview'.__update()
     ]], 0)
+      --autocmd CursorMovedI <buffer> lua require'lean.infoview'.__update()
   else
     set_augroup("LeanInfoviewUpdate", "", 0)
   end
